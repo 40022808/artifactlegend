@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 游戏公告 */
+
+.游戏公告 {
+    border: solid 3px black;
+    width: 80vw;
+    height: 80vh;
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: rgb(221, 221, 221);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: fadeInUp 1s ease forwards;
+    z-index: 3;
+}
+@keyframes fadeInUp {
+    0% {
+      opacity: 0; /* 初始透明度 */
+      transform: translateY(20px); /* 向下移动20px */
+    }
+    100% {
+      opacity: 1; /* 最终透明度 */
+      transform: translateY(0); /* 回到原位置 */
+    }
+}
+
+
+
+.游戏公告_close {
+    position: absolute;
+    right: 3vw;
+    top: 3vh;
+    font-size: 3vmin;
+    height: 5vmin;
+    width: 5vmin;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.游戏公告_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.游戏公告_h1 {
+    font-size: 5vmin;
+    margin: 10px;
+}
+
+.游戏公告_p {
+    font-size: 2.5vmin;
+}
+
+/* 游戏公告 */
+
+
+/* 游戏初始界面 */
+.游戏初始界面 {
+    width: 100vw;
+    height: 100vh;
+    background-color: #75c1e8;
+    z-index: -2;
+}
+
+
+.背景_太阳 {
+    z-index: 0;
+    background-color: rgb(255, 208, 0);
+    width: 7vmax;
+    height: 7vmax;
+    border-radius: 50%;
+    position: absolute;
+    top: 3vh;
+    left: 5vw;
+}
+
+.背景_云朵 {
+    z-index: 0;
+    width: 100vw;
+    height: 45vh;
+    position: relative;
+    top: 7vh;
+}
+
+
+.cloud {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    position: relative;
+    width: 110px;
+    height: 30px;
+    animation: move 80s linear infinite;
+  
+}
+
+.cloud:before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+
+}
+
+
+
+
+
+    
+@keyframes move {
+    0% {
+        margin-left: 0%;
+        opacity: 0; /* 开始时透明 */
+    }
+    1% {
+        opacity: 0.75;
+    }
+    
+    70% {
+        opacity: 0.75; 
+    }
+
+    100% {
+        margin-left: -100%;
+        opacity: 0; /* 快结束时慢慢变透明 */
+    }
+}
+
+
+/* 游戏初始界面 */
